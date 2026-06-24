@@ -179,7 +179,7 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.music-games</string>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<false/>
+	<true/>
 	<!-- Game mode is supposed to be automatically enabled by the app category specification above,
 	     but for some reason it needs to be explicitly enabled with this key. -->
 	<key>GCSupportsGameMode</key>
