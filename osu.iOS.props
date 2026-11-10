@@ -8,8 +8,8 @@
     <NoWarn>$(NoWarn);MT7091</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <!-- On debug configurations, we use Mono interpreter for faster compilation. -->
-    <UseInterpreter>true</UseInterpreter>
+    <!-- gotta try this out cuh. -->
+    <UseMonoRuntime>false</UseMonoRuntime>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <!-- On release configurations, we use AOT compiler for optimal performance, along with Mono Interpreter as a fallback for libraries such as AutoMapper. -->
