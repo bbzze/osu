@@ -2,7 +2,7 @@ name: Build osu iOS
 on: workflow_dispatch
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -10,7 +10,7 @@ jobs:
           dotnet-version: 8.0.x
       - run: dotnet workload install ios
       - run: >
-          dotnet publish osu.iOS -c Release -r ios-arm64
+          dotnet publish osu.iOS -c Debug -r ios-arm64
           -p:CodesignRequireProvisioningProfile=false
           -p:_RequireCodeSigning=false
           -p:EnableAssemblyILStripping=false
