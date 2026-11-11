@@ -24,7 +24,7 @@ jobs:
         run: >
           dotnet publish osu.iOS -c Release -f net11.0-ios -r ios-arm64
           --self-contained
-          -p:Version=2026.1110.0
+          -p:Version=2026.1110.0-tachyon
           -p:UseMonoRuntime=false
           -p:PublishReadyToRunStripDebugInfo=false
           -p:PublishReadyToRunStripInliningInfo=false
