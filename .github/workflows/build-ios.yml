@@ -18,11 +18,14 @@ jobs:
           dotnet workload install ios
       - name: Build
         run: >
-          dotnet build osu.iOS -c Debug -r ios-arm64
+          dotnet publish osu.iOS -c Release -f net11.0-ios -r ios-arm64
+          --self-contained
+          -p:UseMonoRuntime=false
+          -p:PublishReadyToRunStripDebugInfo=false
+          -p:PublishReadyToRunStripInliningInfo=false
           -p:EnableCodeSigning=false
           -p:CodesignRequireProvisioningProfile=false
           -p:_RequireCodeSigning=false
-          -p:EnableAssemblyILStripping=false
       - name: Make the IPA
         run: |
           APP=$(find osu.iOS/bin -name "*.app" -maxdepth 6 | head -n 1)
