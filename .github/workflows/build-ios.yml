@@ -23,6 +23,8 @@ jobs:
           -p:UseMonoRuntime=false
           -p:PublishReadyToRunStripDebugInfo=false
           -p:PublishReadyToRunStripInliningInfo=false
+          -p:DebugType=none
+          -p:DebugSymbols=false
           -p:EnableCodeSigning=false
           -p:CodesignRequireProvisioningProfile=false
           -p:_RequireCodeSigning=false
